@@ -63,6 +63,8 @@ class MongoDbSeederSpec extends Specification {
           rootPath + "src/test/resources/multiple-collections",
           rootPath + "src/test/resources/multiple-collections-two"
         ))
+      //TODO: What's the assertion here?
+      true === true
     }
 
     "seed from folder with one file with json object on each line" in {
@@ -111,9 +113,13 @@ class MongoDbSeederSpec extends Specification {
     "interpolate doesn't strip ids" in {
       MongoDbSeeder.seed(uri, List( rootPath + "src/test/resources/interpolated"))
       Thread.sleep(1000)
+      //TODO: What's the assertion here?
+      true === true
     }
 
     step(closeDb())
+
+
   }
 
 }

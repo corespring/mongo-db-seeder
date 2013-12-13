@@ -1,6 +1,5 @@
 import sbt._
 import Keys._
-import Project._
 
 object Build extends sbt.Build {
 
@@ -8,7 +7,7 @@ object Build extends sbt.Build {
 
   val name = "mongo-db-seeder"
 
-  val baseVersion = "0.6"
+  val baseVersion = "0.7"
 
   lazy val appVersion = {
     val other = Process("git rev-parse --short HEAD").lines.head
@@ -17,8 +16,8 @@ object Build extends sbt.Build {
 
   def buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "org.corespring",
-    scalaVersion := "2.10.1",
-    crossScalaVersions := Seq("2.9.2", "2.10.0"),
+    scalaVersion := "2.10.3",
+    crossScalaVersions := Seq("2.10.0"),
     version := appVersion,
     resolvers ++= Resolvers.commons,
     parallelExecution in Test := false,

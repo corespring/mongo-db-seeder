@@ -10,6 +10,6 @@ object Dependencies {
     val commons = Seq(sonatypeS, sonatype, typesafe)
   }
 
-    val casbah = "org.mongodb" %% "casbah" % "2.6.0"
-    val specs2 = "org.specs2" %% "specs2" % "1.12.3" % "test"
+    val casbah = "org.mongodb" %% "casbah" % "2.6.3"
+    val specs2 = "org.specs2" %% "specs2" % "2.3.6" % "test"
 }
